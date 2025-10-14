@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Red Rhombus — Remote Help</title>
+  <meta name="description" content="Quick links for Red Rhombus remote support and installers." />
+  <meta property="og:title" content="Red Rhombus — Remote Help" />
+  <meta property="og:description" content="Fast support and remote access installers for Windows and macOS." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#c01b2b" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23c01b2b'/%3E%3Cpath d='M50 18 L78 50 L50 82 L22 50 Z' fill='white'/%3E%3C/svg%3E" />
+  <style>
+    :root{
+      /* Brand palette — tweak these to fine‑tune the match to redrhombus.com.au */
+      --brand-red: #c01b2b;   /* primary */
+      --brand-red-600: #a71625; /* hover */
+      --ink: #111827;         /* near-black text */
+      --subtle-ink: #374151;  /* secondary text */
+      --surface: #ffffff;     /* cards */
+      --bg: #f9fafb;          /* page background */
+      --ring: rgba(192, 27, 43, .35);
+      --radius: 16px;
+      --shadow: 0 10px 20px rgba(0,0,0,.06), 0 2px 6px rgba(0,0,0,.05);
+    }
+
+    html,body{height:100%}
+    body{
+      margin:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Inter, "Noto Sans", "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      background: var(--bg); color: var(--ink);
+      display:grid; place-items:center;
+    }
+
+    .wrap{ width: min(860px, 92vw); margin: 6vh auto; }
+
+    header{ display:flex; gap:14px; align-items:center; justify-content:center; margin-bottom: 24px; }
+    .brandmark{ width:42px; height:42px; border-radius:10px; background: var(--brand-red); display:grid; place-items:center; box-shadow: var(--shadow); }
+    .brandmark svg{ width:24px; height:24px; }
+    .title{ font-weight: 800; letter-spacing:.2px; font-size: clamp(22px, 2.5vw, 28px); }
+    .subtitle{ color: var(--subtle-ink); margin-top: 4px; font-size: clamp(14px, 1.8vw, 16px); text-align:center; }
+
+    .panel{ background: var(--surface); border-radius: var(--radius); box-shadow: var(--shadow); padding: clamp(18px, 4vw, 28px); }
+
+    .grid{ display:grid; grid-template-columns: 1fr; gap:16px; margin-top:16px; }
+    @media (min-width: 660px){ .grid{ grid-template-columns: 1fr 1fr 1fr; } }
+
+    .card{ border: 1px solid #eef2f7; border-radius: calc(var(--radius) - 2px); padding: 18px; display:flex; flex-direction:column; gap:12px; }
+    .card h3{ margin:0; font-size: 18px; }
+    .card p{ margin:0; color: var(--subtle-ink); font-size: 14px; }
+
+    .cta{ display:inline-flex; align-items:center; justify-content:center; gap:10px; font-weight:600; text-decoration:none; border-radius:12px; padding: 12px 16px; border: 1px solid transparent; background: var(--brand-red); color:white; box-shadow: 0 6px 16px rgba(192,27,43,.25); transition: transform .06s ease, background .15s ease; }
+    .cta:hover{ background: var(--brand-red-600); transform: translateY(-1px); }
+    .cta:focus-visible{ outline: none; box-shadow: 0 0 0 4px var(--ring); }
+
+    .ghost{ background: #fff; color: var(--brand-red); border-color: rgba(192,27,43,.25); box-shadow:none; }
+    .ghost:hover{ background: rgba(192,27,43,.06); color: var(--brand-red-600); }
+
+    footer{ margin-top: 18px; text-align:center; color: var(--subtle-ink); font-size: 12px; }
+    .muted{ color: var(--subtle-ink); }
+
+    /* Large single-button hero for mobile */
+    .hero{ display:grid; gap:14px; margin-bottom: 16px; }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <div class="brandmark" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+          <rect width="100" height="100" rx="12" fill="currentColor"/>
+        </svg>
+      </div>
+      <div>
+        <div class="title">Red Rhombus — Remote Help</div>
+        <div class="subtitle">Quick access to support and remote tools</div>
+      </div>
+    </header>
+
+    <section class="panel">
+      <div class="hero">
+        <a class="cta" href="https://redrhombus.screenconnect.com/" target="_blank" rel="noopener">⚡ Fast Support</a>
+      </div>
+      <div class="grid">
+        <div class="card">
+          <h3>Windows Installer</h3>
+          <p>One‑click ScreenConnect client for Windows.</p>
+          <a class="cta" href="https://redrhombus.screenconnect.com/Bin/ScreenConnect.ClientSetup.exe?e=Access&y=Guest" target="_blank" rel="nofollow noopener">Download for Windows</a>
+        </div>
+        <div class="card">
+          <h3>macOS Installer</h3>
+          <p>ScreenConnect client for macOS.</p>
+          <a class="cta" href="https://redrhombus.screenconnect.com/Bin/ScreenConnect.ClientSetup.pkg?e=Access&y=Guest" target="_blank" rel="nofollow noopener">Download for macOS</a>
+        </div>
+        <div class="card">
+          <h3>Need something else?</h3>
+          <p>Visit our website for other services and contact options.</p>
+          <a class="cta ghost" href="https://redrhombus.com.au/" target="_blank" rel="noopener">redrhombus.com.au</a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <span class="muted">© Red Rhombus</span>
+    </footer>
+  </main>
+</body>
+</html>
